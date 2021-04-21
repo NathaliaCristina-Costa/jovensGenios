@@ -8,6 +8,8 @@ const Giphy = () =>{
     const [search, setSearch] = useState("");
     const [isLoading, setIsLoading] = useState(false);
 
+
+
     const [paginaPrincipal, setPaginaPrincipal] = useState(1);
     const [itensPorPagina, setItensPorPagina] = useState(10);
     const indexDoUltimoItem = paginaPrincipal * itensPorPagina;
@@ -88,6 +90,7 @@ const Giphy = () =>{
             </form>
             
             <fom className="form-inline justify-content-center m-4">
+
                  <Pagina paginaAtual={paginaAtual} paginaPrincipal={paginaPrincipal} itensPorPagina={itensPorPagina} totalItens={data.length}/>
             </fom>
             

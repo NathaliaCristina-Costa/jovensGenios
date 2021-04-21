@@ -11,9 +11,13 @@ const Pagina = (props) => {
         <nav>
             <ul className="pagination pagination-sm justify-content-end border-0">
                 {carregarMais.map(number => {
+                        let classes = "page-item ";
+                        if (number === props.paginaPrincipal) {
+                          classes += "active";
+                        }
                   
                     return (
-                        <li className="page-item">
+                        <li className={classes}>
                             <a  onClick={()=>props.paginaAtual(number)} href="!#" className="page-link">
                                 {number}
                             </a>
